@@ -12,7 +12,7 @@ from datetime import date, datetime
 import pandas as pd
 import sqlite3
 
-def get_codes(file_path = r"/Users/masao-akiyama/Downloads/プログラミング/python/東京株式市場.xlsx"):    
+def get_codes(file_path = r"/python/東京株式市場.xlsx"):    
     skip_words =['ETF・ETN', 'PRO Market']
     codes = []
 
@@ -33,7 +33,7 @@ def exist_words(text, words):
 
 
 # 東証コードのリストを取得
-codes = get_codes(file_path = r"/Users/masao-akiyama/Downloads/プログラミング/python/東京株式市場.xlsx") 
+codes = get_codes(file_path = r"/python/東京株式市場.xlsx") 
 
 # SQLite3に接続
 conn = sqlite3.connect("stocks.db")
